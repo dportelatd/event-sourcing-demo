@@ -18,4 +18,6 @@ class WalletRepository {
     fun update(walletId: String, updateFunction: (wallet: Wallet) -> Wallet?) {
         get(walletId)?.let(updateFunction)
     }
+
+    fun resetWallets(): Unit = wallets.clear()
 }
